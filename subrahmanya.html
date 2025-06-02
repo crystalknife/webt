@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>E-Greeting Card</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #e0c3fc, #8ec5fc);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .card {
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      padding: 40px;
+      text-align: center;
+      max-width: 400px;
+      position: relative;
+    }
+    h1 {
+      color: #7b2cbf;
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 1.1em;
+      color: #333;
+      margin-bottom: 30px;
+    }
+    button {
+      margin: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>🌟 Happy Day! 🌟</h1>
+    <p>Sending you smiles, love, and good vibes. May your day be as wonderful as you are!</p>
+    <button class="btn btn-primary" onclick="showMessage()">Celebrate 🎉</button>
+    <button class="btn btn-success" onclick="shareToWhatsApp()">Share to WhatsApp 📱</button>
+    <button class="btn btn-warning" onclick="viewMoreCards()">More Cards 🎨</button>
+  </div>
+  <script>
+    function showMessage() {
+      alert('🎉 Celebrating you! 🎉');
+    }
+    
+    function shareToWhatsApp() {
+      const message = "🌟 Happy Day! 🌟\n\nSending you smiles, love, and good vibes. May your day be as wonderful as you are!\n\n✨ Have a beautiful day! ✨";
+      const url = `https://wa.me/?text=${encodeURIComponent(message)}`;
+      window.open(url, '_blank');
+    }
+    
+    function viewMoreCards() {
+      window.open('https://www.123greetings.com/', '_blank');
+    }
+  </script>
+</body>
+</html>
